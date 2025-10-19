@@ -1,24 +1,16 @@
-height = float(input("Enter your height in cm : "))
-weight = float(input("Enter your weight in kg : "))
+# Taking inputs
+name = input("Enter your name: ")
+age = float(input("Enter your age: "))
+student_class = float(input("Enter which class you are in: "))
+last_result = float(input("Enter your last exam result: "))
 
-BMI = weight/(height/100)**2
+deny_text = "🚫 Sorry, but you cannot take this test."
 
-print("Your BMI is : ", BMI)
-
-if BMI <= 18.4 :
-    print("You are underweight")
-
-elif BMI <= 24.9 :
-    print("You are healthy")
-
-elif BMI <= 29.9 :
-    print("You are overweight")
-
-elif BMI <= 34.9 :
-    print("You are severely overweight")
-
-elif BMI <= 39.9 :
-    print("You are obeses")
-
-else :
-    print("You are severely obeses")
+if student_class < 5:
+    print(deny_text)
+elif age < 11:
+    print(deny_text)
+elif last_result < 80:
+    print(deny_text)
+else:
+    print("✅ You are ready to take the test, good luck!🍀")
